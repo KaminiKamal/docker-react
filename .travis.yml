@@ -5,9 +5,6 @@ services:
 before_install:
     - docker build -t kamini/docker-react .
 
-script:
-    - docker run kamini/docker-react npm run test -- --coverage
-
 deploy:
     provider: elasticbeanstalk
     region: "ap-southeast-2"
