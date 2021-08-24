@@ -21,9 +21,9 @@ deploy: #This deploys the whole folder onto elb so it's the production Dockerfil
     bucket_name: "elasticbeanstalk-ap-southeast-2-871839928032" #s3 storage location for all apps deployed to this region
     bucket_path: "docker" #name of the folder where this app you're targeting is located or going to exist
     on:
-        #branch: master #Only deploy when master branch is updated
+        branch: master #Only deploy when master branch is updated
         tags: true
-        all_branches: true 
+        #all_branches: true 
    access_key_id: $AWS_ACCESS_KEY #Environment variable generated in IAM of AWS but stored in travis ci
     secret_access_key:
         secure: "$AWS_SECRET_KEY" # Another environment variable generated in IAM of AWS but stored in travis ci
