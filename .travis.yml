@@ -17,7 +17,7 @@ deploy: #This deploys the whole folder onto elb so it's the production Dockerfil
     provider: elasticbeanstalk
     region: "ap-southeast-2" #region you selected when creating the elb application
     app: 'docker'
-    env: 'docker-env'
+    env: 'Docker-env'
     bucket_name: "elasticbeanstalk-ap-southeast-2-871839928032" #s3 storage location for all apps deployed to this region
     bucket_path: "docker" #name of the folder where this app you're targeting is located or going to exist
     on:
